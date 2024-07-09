@@ -1,0 +1,38 @@
+// Поиск по полю title 
+
+db.books.find(
+  { title: "Идиот" },
+  { title: 1, description: 1, authors: 1 }
+)
+
+
+// Редактирование полей description и authors по _id 
+
+db.books.updateOne(
+  { _id: ObjectId("указать_здесь_id_записи") },
+  {
+    $set: {
+      description: "Обновленное описание",
+      authors: "Обновленные авторы"
+    }
+  }
+)
+
+// Find by Title
+
+db.books.find(
+  { title: "Идиот" },
+  { title: 1, description: 1, authors: 1 }
+)
+
+// Update by _id
+
+db.books.updateOne(
+  { _id: ObjectId("укажите_здесь_id_записи") },
+  {
+    $set: {
+      description: "Обновленное описание",
+      authors: "Обновленные авторы"
+    }
+  }
+)
